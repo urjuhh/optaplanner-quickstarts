@@ -166,7 +166,7 @@ function refreshTimeTable() {
 
 function convertToId(str) {
   // Base64 encoding without padding to avoid XSS
-  return btoa(str).replace(/=/g, "");
+  return btoa(str).replace(/=/g, "").replace(/[\+\/]/g, "_");
 }
 
 function solve() {
